@@ -14,7 +14,9 @@
                 {{ index + 1 }}
               </template>
             </td>
-            <td v-for="element in period"><xelement :element="element"></xelement></td>
+            <td v-for="element in period">
+              <xelement v-if="Object.keys(element).length > 0" :element="element"></xelement>
+            </td>
           </tr>
         </tbody>
       </table>
