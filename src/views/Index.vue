@@ -85,12 +85,15 @@ export default {
 
       td {
         padding: 20px 0;
+        width: 100px;
       }
     }
 
-    .elements__period {
+    td.elements__period {
       width: 40px;
       padding-right: 20px;
+      text-align: center;
+      box-sizing: border-box;
     }
   }
 </style>
