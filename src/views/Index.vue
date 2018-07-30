@@ -6,15 +6,15 @@
         <tbody>
           <tr class="elements__group">
             <td class="elements__period"></td>
-            <td v-for="group in 18">{{ group }}</td>
+            <td v-for="group in 18" :key="group">{{ group }}</td>
           </tr>
-          <tr v-for="(period, index) in elements">
+          <tr v-for="(period, index) in elements" :key="index">
             <td class="elements__period">
               <template v-if="index < 7">
                 {{ index + 1 }}
               </template>
             </td>
-            <td v-for="element in period">
+            <td v-for="(element, index) in period" :key="index">
               <xelement v-if="Object.keys(element).length > 0" :element="element"></xelement>
             </td>
           </tr>
@@ -80,6 +80,7 @@ export default {
 
     td {
       padding: 0;
+        width: 100px;
     }
 
     .elements__group {

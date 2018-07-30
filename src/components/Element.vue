@@ -17,20 +17,10 @@
 
 <script>
 export default {
-  name: 'element',
   props: {
     element: {
       type: Object,
-      default() {
-        return {
-          atomicNumber: 1,
-          symbol: 'H',
-          name: 'Hydrogen',
-          atomicMass: 1.00794,
-          category: 'nonmetal',
-          phase: 'gas',
-        };
-      },
+      required: true,
     },
   },
   computed: {
